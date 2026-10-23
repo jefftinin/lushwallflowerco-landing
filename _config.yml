@@ -1,6 +1,6 @@
 # Site settings
 title: Lush Wallflower Co.
-tagline: High-density, full-bloom silk floral walls for weddings, debuts, and parties across Negros.
+tagline: High-density, full-bloom silk floral walls for weddings, debuts, and parties Silay, Talisay, and Bacolod.
 email: lushwallflowerco@gmail.com
 description: |
   Premium floral backdrop rental. High-density, full-bloom silk floral walls
@@ -12,11 +12,12 @@ launch_status: Launching Soon
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
-twitter_username:
+twitter_username: "@lushwallflowerco"
 github_username:
 phone: "+63 976 421 4246"
 
 theme-color: "#8fa38e"
+highlight-color: "#f1c1b5"
 
 # Build settings
 markdown: kramdown
