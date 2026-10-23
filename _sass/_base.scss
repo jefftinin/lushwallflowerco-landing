@@ -201,11 +201,25 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../assets/img/wall_front.webp');
     text-align: center;
-    color: white;
+    color: $theme-ink;
+    // The backdrop is a near-uniform ivory floral wall, so dark ink reads well
+    // directly on it. A light scrim lifts the floral texture just enough that
+    // thin strokes stay crisp without looking like a panel.
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(white, .45);
+        pointer-events: none;
+    }
     .header-content {
         position: relative;
+        z-index: 1;
         text-align: center;
         padding: 100px 15px 100px;
         width: 100%;
