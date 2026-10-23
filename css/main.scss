@@ -43,6 +43,8 @@
 // the original Creative Theme orange, when the key is missing or empty).
 $theme-primary: {{ site.theme-color | default: "#F05F40" }};
 $theme-dark: #222;
+// Ink used on the hero, sampled from the dark logo art so text and mark match.
+$theme-ink: #343232;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

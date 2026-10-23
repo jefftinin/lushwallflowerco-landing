@@ -81,6 +81,19 @@ aside {
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
+        // Logo sits to the left of the brand text, vertically centered
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .navbar-brand-logo {
+            display: block;
+            height: 44px;
+            width: auto;
+            margin-right: 10px;
+        }
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
@@ -111,31 +124,62 @@ aside {
         }
     }
     @media (min-width: 768px) {
+        // Overlay mode: the bar is transparent and sits on the light, busy hero.
+        // The brand gets a soft light panel so it separates from the florals, and
+        // its text uses a darkened sage because $theme-primary (a light mid-tone)
+        // only reaches ~2.5:1 against this backdrop -- a panel alone cannot fix
+        // that, it needs more depth.
         background-color: transparent;
-        border-color: rgba(white, .3);
+        border-color: rgba($theme-ink, .2);
         .navbar-header .navbar-brand {
-            color: rgba(white, .7);
+            // Bootstrap pulls the brand left by -15px to cancel the container's
+            // gutter. The pill panel makes that flush-to-edge look broken, so give
+            // it a proper left margin instead.
+            margin-left: 15px;
+            padding: 6px 16px;
+            border-radius: 300px;
+            background-color: rgba(white, .7);
+            color: darken($theme-primary, 25%);
+            @include transition-all;
             &:hover,
             &:focus {
-                color: white;
+                background-color: rgba(white, .9);
+                color: darken($theme-primary, 32%);
+            }
+            .navbar-brand-logo {
+                height: 36px;
+                margin-right: 8px;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, .7);
+            color: rgba($theme-ink, .8);
             &:hover {
-                color: white;
+                color: $theme-ink;
             }
         }
         &.affix {
             background-color: white;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
-                color: $theme-primary;
+                // Reset the overlay-state pill, including its left gutter, so the
+                // brand sits at Bootstrap's normal offset on the solid bar.
+                margin-left: 0;
+                padding: 0;
+                background-color: transparent;
+                border-radius: 0;
+                // Same depth as the overlay state: light sage on white is only
+                // ~2.7:1, so the scrolled bar uses a darker tone too.
+                color: darken($theme-primary, 25%);
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken($theme-primary, 10%);
+                    background-color: transparent;
+                    color: darken($theme-primary, 32%);
+                }
+                .navbar-brand-logo {
+                    height: 44px;
+                    margin-right: 10px;
                 }
             }
             .nav > li > a,
@@ -176,10 +220,29 @@ header {
                 margin: 30px auto;
             }
             p {
-                font-weight: 300;
-                color: rgba(white, .7);
+                // 300 is too thin for dark ink over a textured photo; 500 keeps
+                // the strokes solid while staying lighter than the headline.
+                font-weight: 500;
+                color: rgba($theme-ink, .85);
                 font-size: 16px;
                 margin-bottom: 50px;
+            }
+            // Brand block: logo above, plain-text company name below. Declared after
+            // the generic `p` rule so it wins on font size and color.
+            .header-logo {
+                display: block;
+                width: auto;
+                height: 110px;
+                margin: 0 auto 15px;
+            }
+            .header-brand-text {
+                @include sans-serif-font;
+                font-weight: 700;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                color: $theme-ink;
+                margin-bottom: 40px;
             }
         }
     }
@@ -223,12 +286,12 @@ header {
         display: inline-block;
         margin: 0 8px 10px;
         padding: 8px 18px;
-        border: 1px solid rgba(white, .4);
+        border: 1px solid rgba($theme-ink, .35);
         border-radius: 300px;
         font-size: 14px;
         font-weight: 600;
         text-transform: uppercase;
-        color: white;
+        color: $theme-ink;
         .fa {
             margin-right: 6px;
         }
