@@ -5,6 +5,8 @@ email: lushwallflowerco@gmail.com
 description: |
   Premium floral backdrop rental. High-density, full-bloom silk floral walls
   for weddings, parties, and intimate celebrations in Silay City and Bacolod.
+# Browser tab / search result title suffix (see _includes/head.html)
+page_title: Flower Wall Rental in Silay City & Bacolod
 location: Silay City & Bacolod Area
 launch_status: Launching Soon
 baseurl: "" # the subpath of your site, e.g. /blog/

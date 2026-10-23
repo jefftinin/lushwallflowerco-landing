@@ -1,14 +1,15 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1>Something lush is blooming in Negros</h1>
+            <h1>{{ site.data.hero.title }}</h1>
             <hr>
-            <p>High-density, full-bloom silk floral walls that make every portrait look like a masterpiece &mdash; for weddings in Silay, parties in Bacolod, and intimate celebrations anywhere in Negros.</p>
+            <p>{{ site.data.hero.text }}</p>
             <ul class="header-badges">
-                <li><i class="fa fa-map-marker"></i> {{ site.location | replace: '&', '&amp;' }}</li>
-                <li><i class="fa fa-calendar"></i> {{ site.launch_status }}</li>
+                {% for badge in site.data.hero.badges %}
+                <li><i class="fa fa-{{ badge.icon }}"></i> {% if badge.text %}{{ badge.text }}{% elsif badge.escape_html %}{{ site[badge.site_key] | escape }}{% else %}{{ site[badge.site_key] }}{% endif %}</li>
+                {% endfor %}
             </ul>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            <a href="#{{ site.data.hero.button.anchor }}" class="btn btn-primary btn-xl page-scroll">{{ site.data.hero.button.text }}</a>
         </div>
     </div>
 </header>

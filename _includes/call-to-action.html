@@ -2,24 +2,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Say goodbye to flat, sparse event backdrops.</h2>
+                <h2 class="section-heading">{{ site.data.about.title }}</h2>
                 <hr class="light">
-                <p class="text-faded">Whether you're planning a wedding in Silay, a party in Bacolod, or an intimate celebration anywhere in Negros, your backdrop is about to get a major upgrade.</p>
+                <p class="text-faded">{{ site.data.about.text }}</p>
                 <ul class="feature-facts">
+                    {% for fact in site.data.about.facts %}
                     <li>
-                        <i class="fa fa-leaf"></i>
-                        <span>High-density silk floral walls</span>
+                        <i class="fa fa-{{ fact.icon }}"></i>
+                        <span>{% if fact.text %}{{ fact.text }}{% elsif fact.escape_html %}{{ site[fact.site_key] | escape }}{% else %}{{ site[fact.site_key] }}{% endif %}</span>
                     </li>
-                    <li>
-                        <i class="fa fa-map-marker"></i>
-                        <span>{{ site.location | replace: '&', '&amp;' }}</span>
-                    </li>
-                    <li>
-                        <i class="fa fa-calendar"></i>
-                        <span>{{ site.launch_status }}</span>
-                    </li>
+                    {% endfor %}
                 </ul>
-                <a href="mailto:{{ site.email }}" class="btn btn-default btn-xl">Enquire Now</a>
+                <a href="{% if site.data.about.button.email %}mailto:{{ site.email }}{% else %}{{ site.data.about.button.href }}{% endif %}" class="btn btn-default btn-xl">{{ site.data.about.button.text }}</a>
             </div>
         </div>
     </div>

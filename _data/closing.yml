@@ -1,0 +1,7 @@
+# Dark "be first to know" band (aside)
+# `meta: true` renders "<location> &middot; <launch_status>"; set a plain `title` instead if you prefer.
+meta: true
+
+button:
+  text: Be First to Know
+  email: true

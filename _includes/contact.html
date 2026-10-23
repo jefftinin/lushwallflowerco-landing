@@ -2,25 +2,21 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
+                <h2 class="section-heading">{{ site.data.contact.heading }}</h2>
                 <hr class="primary">
-                <p>Planning a wedding in Silay, a party in Bacolod, or an intimate celebration anywhere in Negros? Tell us the date and we'll get back to you as soon as possible.</p>
-                <p class="contact-meta"><i class="fa fa-map-marker"></i> {{ site.location | replace: '&', '&amp;' }} &middot; {{ site.launch_status }}</p>
+                <p>{{ site.data.contact.text }}</p>
+                <p class="contact-meta"><i class="fa fa-map-marker"></i> {% if site.data.contact.meta == true %}{{ site.location | escape }} &middot; {{ site.launch_status }}{% else %}{{ site.data.contact.meta }}{% endif %}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <a href="mailto:{{ site.email }}">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p>{{ site.email }}</p>
+            {% for detail in site.data.contact.details %}
+            <div class="col-lg-4 {% if forloop.first %}col-lg-offset-2 {% endif %}text-center">
+                <a href="{% if detail.email %}mailto:{{ site.email }}{% elsif detail.phone %}tel:{{ site.phone | remove: ' ' }}{% else %}{{ detail.href }}{% endif %}">
+                    <i class="fa fa-{{ detail.icon }} fa-3x wow bounceIn" data-wow-delay=".{{ forloop.index }}s"></i>
+                    <p>{% if detail.email %}{{ site.email }}{% elsif detail.phone %}{{ site.phone }}{% else %}{{ detail.text }}{% endif %}</p>
                 </a>
             </div>
-            <div class="col-lg-4 text-center">
-                <a href="tel:{{ site.phone | remove: ' ' }}">
-                    <i class="fa fa-phone fa-3x wow bounceIn" data-wow-delay=".2s"></i>
-                    <p>{{ site.phone }}</p>
-                </a>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

@@ -1,0 +1,9 @@
+# Main navigation links (in display order)
+- title: About
+  anchor: about
+- title: The Walls
+  anchor: services
+- title: Occasions
+  anchor: portfolio
+- title: Contact
+  anchor: contact

@@ -1,96 +1,23 @@
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
+            {% for item in site.data.portfolio.items %}
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
+                <a href="{{ item.href | default: '#' }}" class="portfolio-box">
+                    <img src="{{ item.image }}" class="img-responsive" alt="{{ item.alt }}">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Weddings
+                                {{ item.category }}
                             </div>
                             <div class="project-name">
-                                Silay &amp; Bacolod
+                                {{ item.name }}
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Debuts
-                            </div>
-                            <div class="project-name">
-                                Milestone portraits
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Parties
-                            </div>
-                            <div class="project-name">
-                                Celebrations anywhere in Negros
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Intimate Events
-                            </div>
-                            <div class="project-name">
-                                Small guest lists, full look
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Portrait Sessions
-                            </div>
-                            <div class="project-name">
-                                Backdrops built to be photographed
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Launching Soon
-                            </div>
-                            <div class="project-name">
-                                New walls on the way
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

@@ -1,8 +1,8 @@
   <aside class="bg-dark">
       <div class="container text-center">
           <div class="call-to-action">
-              <h2>{{ site.location | replace: '&', '&amp;' }} &middot; {{ site.launch_status }}</h2>
-              <a href="mailto:{{ site.email }}" class="btn btn-default btn-xl wow tada">Be First to Know</a>
+              <h2>{% if site.data.closing.meta %}{{ site.location | escape }} &middot; {{ site.launch_status }}{% else %}{{ site.data.closing.title }}{% endif %}</h2>
+              <a href="{% if site.data.closing.button.email %}mailto:{{ site.email }}{% else %}{{ site.data.closing.button.href }}{% endif %}" class="btn btn-default btn-xl wow tada">{{ site.data.closing.button.text }}</a>
           </div>
       </div>
   </aside>

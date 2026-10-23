@@ -1,0 +1,33 @@
+# "Occasions" photo grid
+# Images are relative to the site root; add or remove entries as needed.
+items:
+  - image: img/portfolio/1.jpg
+    alt: Weddings in Silay and Bacolod
+    category: Weddings
+    name: Silay &amp; Bacolod
+    href: "#"
+  - image: img/portfolio/2.jpg
+    alt: Debut milestone portraits
+    category: Debuts
+    name: Milestone portraits
+    href: "#"
+  - image: img/portfolio/3.jpg
+    alt: Parties and celebrations anywhere in Negros
+    category: Parties
+    name: Celebrations anywhere in Negros
+    href: "#"
+  - image: img/portfolio/4.jpg
+    alt: Intimate events with small guest lists
+    category: Intimate Events
+    name: Small guest lists, full look
+    href: "#"
+  - image: img/portfolio/5.jpg
+    alt: Portrait sessions
+    category: Portrait Sessions
+    name: Backdrops built to be photographed
+    href: "#"
+  - image: img/portfolio/6.jpg
+    alt: New walls on the way
+    category: Launching Soon
+    name: New walls on the way
+    href: "#"

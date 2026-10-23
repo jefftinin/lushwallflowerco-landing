@@ -1,0 +1,13 @@
+# "Let's Get In Touch!" section
+heading: Let's Get In Touch!
+text: Planning a wedding in Silay, a party in Bacolod, or an intimate celebration anywhere in Negros? Tell us the date and we'll get back to you as soon as possible.
+# `meta: true` renders "<location> &middot; <launch_status>"; set a plain `meta` string instead if you prefer.
+meta: true
+
+# Each entry becomes one of the contact columns.
+# `email` / `phone` build the link and pull the text from that _config.yml setting.
+details:
+  - icon: envelope-o
+    email: true
+  - icon: phone
+    phone: true
