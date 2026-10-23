@@ -1,11 +1,11 @@
 # The highlighted "about" band below the header
 title: Say goodbye to flat, sparse event backdrops.
-text: Whether you're planning a wedding in Silay, a party in Bacolod, or an intimate celebration anywhere in Negros, your backdrop is about to get a major upgrade.
+text: Perfect for taking leveled up memorable photos during parties, weddings, and very special occasions.
 
 # Icon + label pairs shown in a row (`icon` is a Font Awesome class)
 facts:
   - icon: leaf
-    text: High-density silk floral walls
+    text: Bloom-filled Backdrop
   - icon: map-marker
     site_key: location
     escape_html: true
@@ -13,6 +13,6 @@ facts:
     site_key: launch_status
 
 button:
-  text: Enquire Now
+  text: Check a Date
   # `email` links to site.email, or replace with a `href` instead
   email: true

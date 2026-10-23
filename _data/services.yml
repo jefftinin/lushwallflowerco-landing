@@ -1,16 +1,19 @@
-# "What We Bring" section
-heading: What We Bring
+# "What You Get" section
+# We rent one wall: white blooms facing the guests, plain fabric on the back.
+# Rental only - the client picks it up and sets it up. Keep the three boxes on
+# that single product, and don't claim delivery, setup, or teardown.
+heading: What You Get
 
 items:
   - icon: leaf
-    title: High-Density Silk Florals
-    text: Full-bloom silk floral walls with no bare patches. Built for close-up portraits and wide event shots alike.
-  - icon: camera-retro
-    title: Portrait-Ready
-    text: Every backdrop is styled so your photos look like a masterpiece. No flat, sparse walls behind your guests.
+    title: White Wallflower Wall
+    text: Ivory and soft white roses and hydrangeas, packed into a lush wall of flowers.
+  - icon: expand
+    title: One Tall Wall
+    text: A single freestanding backdrop, tall enough for group shots. It hides the wall behind it and gives everyone a clean frame.
   - icon: map-marker
-    title: Across Negros
-    text: "Based in "
+    title: Yours for the Day
+    text: "Book the date, pick the wall up in "
     site_key: location
     escape_html: true
-    text_after: " - available for weddings, parties, and intimate celebrations."
+    text_after: ", and set it up wherever you need it."
