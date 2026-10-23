@@ -346,6 +346,35 @@ header {
     }
 }
 
+// Services ("What We Bring")
+// Uses the back of the wall (ivory fabric on a frame) as a quiet texture so it
+// sits apart from the hero's front-facing shot. Same treatment as the hero:
+// cover, fixed-ish focal point, light scrim, dark ink on top.
+#services {
+    position: relative;
+    @include background-cover;
+    background-position: center;
+    background-image: url('../assets/img/wall_back.webp');
+    color: $theme-ink;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(white, .6);
+        pointer-events: none;
+    }
+    > .container {
+        position: relative;
+        z-index: 1;
+    }
+    .text-muted {
+        color: rgba($theme-ink, .8);
+    }
+}
+
 .service-box {
     max-width: 400px;
     margin: 50px auto 0;
