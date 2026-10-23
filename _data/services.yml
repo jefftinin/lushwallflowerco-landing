@@ -4,13 +4,13 @@ heading: What We Bring
 items:
   - icon: leaf
     title: High-Density Silk Florals
-    text: Full-bloom silk floral walls with no bare patches &mdash; built for close-up portraits and wide event shots alike.
+    text: Full-bloom silk floral walls with no bare patches. Built for close-up portraits and wide event shots alike.
   - icon: camera-retro
     title: Portrait-Ready
-    text: Every backdrop is styled so your photos look like a masterpiece &mdash; no flat, sparse walls behind your guests.
+    text: Every backdrop is styled so your photos look like a masterpiece. No flat, sparse walls behind your guests.
   - icon: map-marker
     title: Across Negros
     text: "Based in "
     site_key: location
     escape_html: true
-    text_after: " &mdash; available for weddings, parties, and intimate celebrations."
+    text_after: " - available for weddings, parties, and intimate celebrations."
