@@ -9,7 +9,7 @@ description: |
 page_title: Flower Wall Rental in Silay City & Bacolod
 location: Silay City & Bacolod Area
 launch_status: Launching Soon
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/lushwallflowerco-landing/" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 twitter_username: "@lushwallflowerco"
