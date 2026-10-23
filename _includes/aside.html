@@ -1,8 +1,8 @@
   <aside class="bg-dark">
       <div class="container text-center">
           <div class="call-to-action">
-              <h2>Free Download at Start Bootstrap!</h2>
-              <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+              <h2>{{ site.location | replace: '&', '&amp;' }} &middot; {{ site.launch_status }}</h2>
+              <a href="mailto:{{ site.email }}" class="btn btn-default btn-xl wow tada">Be First to Know</a>
           </div>
       </div>
   </aside>

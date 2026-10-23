@@ -1,12 +1,20 @@
 # Site settings
-title:
-email:
-description: > # this means to ignore newlines until "baseurl:"
+title: Lush Wallflower Co.
+tagline: High-density, full-bloom silk floral walls for weddings, debuts, and parties across Negros.
+email: lushwallflowerco@gmail.com
+description: |
+  Premium floral backdrop rental. High-density, full-bloom silk floral walls
+  for weddings, parties, and intimate celebrations in Silay City and Bacolod.
+location: Silay City & Bacolod Area
+launch_status: Launching Soon
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 twitter_username:
 github_username:
+phone: "+63 976 421 4246"
+
+theme-color: "#8fa38e"
 
 # Build settings
 markdown: kramdown

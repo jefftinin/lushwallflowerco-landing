@@ -2,10 +2,24 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">We've got what you need!</h2>
+                <h2 class="section-heading">Say goodbye to flat, sparse event backdrops.</h2>
                 <hr class="light">
-                <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                <a href="#" class="btn btn-default btn-xl">Get Started!</a>
+                <p class="text-faded">Whether you're planning a wedding in Silay, a party in Bacolod, or an intimate celebration anywhere in Negros, your backdrop is about to get a major upgrade.</p>
+                <ul class="feature-facts">
+                    <li>
+                        <i class="fa fa-leaf"></i>
+                        <span>High-density silk floral walls</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <span>{{ site.location | replace: '&', '&amp;' }}</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-calendar"></i>
+                        <span>{{ site.launch_status }}</span>
+                    </li>
+                </ul>
+                <a href="mailto:{{ site.email }}" class="btn btn-default btn-xl">Enquire Now</a>
             </div>
         </div>
     </div>

@@ -33,8 +33,15 @@
 //     }
 // }
 
+// Root theme-color from Jekyll config
+:root {
+  --theme-color: {{ site.theme-color }};
+}
+
 // variables.less
-$theme-primary: #F05F40;
+// Theme color comes from `theme-color` in `_config.yml` (default: #F05F40,
+// the original Creative Theme orange, when the key is missing or empty).
+$theme-primary: {{ site.theme-color | default: "#F05F40" }};
 $theme-dark: #222;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
